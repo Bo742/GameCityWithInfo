@@ -27,7 +27,7 @@ public class MainWindow extends JFrame  {
     public JLabel nickNameTwoLabel = new JLabel("Введите имя второго игрока:");
     public JLabel turnOfEndLabel = new JLabel("Ходов до конца игры :100 ");
     public JLabel yourTurn = new JLabel("Ход игрока ВасяПупкин228");
-    public JLabel yourCityOnWord = new JLabel("Вам город на букву Г");
+    public JLabel yourCityOnWord = new JLabel("Введите город ");
     public JLabel pointsOfFirstGamer = new JLabel("Васяпупкин228 :");
     public JLabel pointsOfSecondGamer = new JLabel("Васяпупкин1488 :");
 
