@@ -69,6 +69,7 @@ public class SearchCity {
             isContain = resultString.contains("Город") | resultString.contains("Столица");
             if (isContain == false) {
                 try {
+                    allText=null;
                     wiki = new URL("https://ru.wikipedia.org/wiki/" + city + "_(город)");
                     wikiCon = wiki.openConnection();
                     lengthAllText = wikiCon.getContentLengthLong();
@@ -93,9 +94,10 @@ public class SearchCity {
                 if(yourLetter.equals("ъ")||yourLetter.equals("ь")||yourLetter.equals("й")||yourLetter.equals("ы")||yourLetter.equals("э")){
                     yourLetter = city.substring(city.length()-2,city.length()-1);
                 }
-                if(Main.mainWindow.count.getCount()==2){
-                Main.mainWindow.count.setCount();}
-                Main.mainWindow.yourCityOnWord.setText("Вам город на букву " + yourLetter);
+                if(Main.mainWindow.count.getCount()==6){
+                Main.mainWindow.count.setCount();
+                }
+                Main.mainWindow.yourCityOnWord.setText("Вам город на букву " + yourLetter.toUpperCase());
                 Main.mainWindow.turnOfEndLabel.setText("Ходов до конца игры:"+Main.mainWindow.count.getCount());
 
 

@@ -21,7 +21,6 @@ public class TwoPlayerButtonActionListener implements ActionListener {
         Main.mainWindow.helloLabel.setVisible(false);
 
         Main.mainWindow.areaForAnswerField.setText(null);
-        Main.mainWindow.count.setDefCount(2);
         Main.mainWindow.pointsOfFirstGamer.setText(null);
         Main.mainWindow.pointsOfSecondGamer.setText(null);
         Main.mainWindow.yourCityOnWord.setText("Введите город:");

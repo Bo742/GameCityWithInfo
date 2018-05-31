@@ -39,7 +39,8 @@ public class BackButtonActionListener implements ActionListener {
         Main.mainWindow.logOfCityText.setText(null);
         Main.mainWindow.nickNameFirstPlayerField.setText(null);
         Main.mainWindow.nickNameSecondPlayerField.setText(null);
-        Main.mainWindow.count.setDefCount(2);
+
+        Main.mainWindow.helloLabel.setText(null);
 
 
 

@@ -6,7 +6,7 @@ import com.company.ActionListener.*;
 
 
 public class MainWindow extends JFrame  {
-   static public Count count = new Count(2);
+   static public Count count = new Count(6);
     //announce graphical elements
 
     public JButton twoPlayerButton = new JButton("Два игрока");
@@ -33,8 +33,6 @@ public class MainWindow extends JFrame  {
 
 
 
-// ДОПИСАТЬ РАСПОЛОЖЕНИЕ
-
 
 
 
@@ -49,6 +47,7 @@ public class MainWindow extends JFrame  {
 
         //Create New Font
         Font myFontOnHelloLabel = new Font("TimesNewRoman",Font.BOLD,30);
+        Font myFontForButton = new Font("TimesNewRoman",Font.BOLD,18);
         //create container
         Container container = this.getContentPane();
         container.setLayout(null);
@@ -81,40 +80,48 @@ public class MainWindow extends JFrame  {
 
 
         //TwoPlayerButtonSettings
-            twoPlayerButton.setBounds(300, 150, 100, 30);
+            twoPlayerButton.setBounds(250, 150, 200, 50);
             twoPlayerButton.setVisible(true);
             twoPlayerButton.addActionListener(new TwoPlayerButtonActionListener());
+            twoPlayerButton.setFont(myFontForButton);
 
         //RulesButtonSettings
-            rulesButton.setBounds(300, 200, 100, 30);
+            rulesButton.setBounds(250, 230, 200, 50);
             rulesButton.setVisible(true);
             rulesButton.addActionListener(new RulesButtonActionListener());
+            rulesButton.setFont(myFontForButton);
+
 
 
         //ExitFromMainMenuButtonSettings
-            exitFromMainMenuButton.setBounds(300, 250, 100, 30);
+            exitFromMainMenuButton.setBounds(250, 310, 200, 50);
             exitFromMainMenuButton.setVisible(true);
             exitFromMainMenuButton.addActionListener(new ExitFromMainMenuButtonActionListener());
+            exitFromMainMenuButton.setFont(myFontForButton);
 
         //BackButtonSettings
-            backButton.setBounds(100, 400, 100, 30);
+            backButton.setBounds(50, 370, 200, 50);
             backButton.setVisible(false);
             backButton.addActionListener(new BackButtonActionListener());
+            backButton.setFont(myFontForButton);
 
         //AcceptAnswerButtonSettings
-            acceptAnswerButton.setBounds(250, 240, 150, 30);
+            acceptAnswerButton.setBounds(250, 240, 200, 30);
             acceptAnswerButton.setVisible(false);
             acceptAnswerButton.addActionListener(new AcceptAnswerButtonActionListener());
+            acceptAnswerButton.setFont(myFontForButton);
 
         //AcceptNickNameButtonSettings
             acceptNickNameButton.setBounds(300, 270, 200, 50);
             acceptNickNameButton.setVisible(false);
             acceptNickNameButton.addActionListener(new AcceptNickNameButtonActionListener());
+            acceptNickNameButton.setFont(myFontForButton);
 
         //ExitFromRulesAndGameButtonSettings
-            exitFromRulesAndGameButton.setBounds(500, 400, 100, 30);
+            exitFromRulesAndGameButton.setBounds(400, 370, 200, 50);
             exitFromRulesAndGameButton.setVisible(false);
             exitFromRulesAndGameButton.addActionListener(new ExitFromRulesAndGameButtonActionListener());
+            exitFromRulesAndGameButton.setFont(myFontForButton);
 
         //RulesTextSettings
             rulesText.setBounds(200, 50, 300, 300);
@@ -122,7 +129,7 @@ public class MainWindow extends JFrame  {
             rulesText.setEditable(false);
 
         //LogOfCityTextSettings
-            logOfCityText.setBounds(0, 140, 150, 200);
+            logOfCityText.setBounds(50, 140, 150, 200);
             logOfCityText.setVisible(false);
             logOfCityText.setEditable(false);
 
@@ -137,7 +144,7 @@ public class MainWindow extends JFrame  {
             nickNameSecondPlayerField.setText(null);
 
         //AreaForAnswerFieldSettings
-            areaForAnswerField.setBounds(200, 200, 200, 30);
+            areaForAnswerField.setBounds(250, 200, 200, 30);
             areaForAnswerField.setVisible(false);
 
         //HelloLabelSettings
@@ -146,7 +153,7 @@ public class MainWindow extends JFrame  {
              helloLabel.setFont(myFontOnHelloLabel);
 
         //LogOfCityLabelSettings
-            logOfCityLabel.setBounds(000,100,150,40);
+            logOfCityLabel.setBounds(50,100,150,40);
             logOfCityLabel.setVisible(false);
 
         //NickNameOneLabelSettings
@@ -158,23 +165,23 @@ public class MainWindow extends JFrame  {
             nickNameTwoLabel.setVisible(false);
 
         //YourTurnSettings
-            yourTurn.setBounds(200,50,200,30);
+            yourTurn.setBounds(250,50,200,30);
             yourTurn.setVisible(false);
 
         //YourCityOnWordSettings
-            yourCityOnWord.setBounds(200,160,500,30);
+            yourCityOnWord.setBounds(250,160,500,30);
             yourCityOnWord.setVisible(false);
 
         //TurnOfEndSettings
-            turnOfEndLabel.setBounds(200,280,200,30);
+            turnOfEndLabel.setBounds(250,280,200,30);
             turnOfEndLabel.setVisible(false);
 
         //PointsOfFirstGamerSettings
-            pointsOfFirstGamer.setBounds(500,150,200,30);
+            pointsOfFirstGamer.setBounds(470,150,200,30);
             pointsOfFirstGamer.setVisible(false);
 
         //PointsOfSecondGamerSettings
-            pointsOfSecondGamer.setBounds(500,200,200,30);
+            pointsOfSecondGamer.setBounds(470,200,200,30);
             pointsOfSecondGamer.setVisible(false);
 
 
