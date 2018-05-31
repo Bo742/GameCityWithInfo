@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 public class RulesButtonActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.mainWindow.onePlayerButton.setVisible(false);
+       // Main.mainWindow.onePlayerButton.setVisible(false);
         Main.mainWindow.twoPlayerButton.setVisible(false);
         Main.mainWindow.rulesButton.setVisible(false);
         Main.mainWindow.backButton.setVisible(true);

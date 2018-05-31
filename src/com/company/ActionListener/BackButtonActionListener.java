@@ -9,7 +9,6 @@ import java.awt.event.ActionListener;
 public class BackButtonActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        Main.mainWindow.onePlayerButton.setVisible(true);
         Main.mainWindow.twoPlayerButton.setVisible(true);
         Main.mainWindow.rulesButton.setVisible(true);
         Main.mainWindow.backButton.setVisible(false);
@@ -32,6 +31,20 @@ public class BackButtonActionListener implements ActionListener {
         Main.mainWindow.yourCityOnWord.setVisible(false);
         Main.mainWindow.pointsOfFirstGamer.setVisible(false);
         Main.mainWindow.pointsOfSecondGamer.setVisible(false);
+
+        Main.mainWindow.pointsOfFirstGamer.setText(null);
+        Main.mainWindow.pointsOfSecondGamer.setText(null);
+        Main.mainWindow.yourCityOnWord.setText("Введите город:");
+        Main.mainWindow.yourTurn.setText(null);
+        Main.mainWindow.logOfCityText.setText(null);
+        Main.mainWindow.nickNameFirstPlayerField.setText(null);
+        Main.mainWindow.nickNameSecondPlayerField.setText(null);
+        Main.mainWindow.count.setDefCount(2);
+
+
+
+
+
 
     }
 }

@@ -6,9 +6,9 @@ import com.company.ActionListener.*;
 
 
 public class MainWindow extends JFrame  {
-
+   static public Count count = new Count(2);
     //announce graphical elements
-    public JButton onePlayerButton = new JButton("Один игрок");
+
     public JButton twoPlayerButton = new JButton("Два игрока");
     public JButton rulesButton = new JButton("Правила");
     public JButton exitFromMainMenuButton = new JButton("Выход");
@@ -25,24 +25,28 @@ public class MainWindow extends JFrame  {
     public JLabel helloLabel = new JLabel("Добро пожаловать");
     public JLabel nickNameOneLabel = new JLabel("Введите имя первого игрока:");
     public JLabel nickNameTwoLabel = new JLabel("Введите имя второго игрока:");
-    public JLabel turnOfEndLabel = new JLabel("Ходов до конца игры :100 ");
-    public JLabel yourTurn = new JLabel("Ход игрока ВасяПупкин228");
-    public JLabel yourCityOnWord = new JLabel("Введите город ");
-    public JLabel pointsOfFirstGamer = new JLabel("Васяпупкин228 :");
-    public JLabel pointsOfSecondGamer = new JLabel("Васяпупкин1488 :");
+    public JLabel turnOfEndLabel = new JLabel("Ходов до конца игры:"+ count.getCount());
+    public JLabel yourTurn = new JLabel("");
+    public JLabel yourCityOnWord = new JLabel("Введите город: ");
+    public JLabel pointsOfFirstGamer = new JLabel("");
+    public JLabel pointsOfSecondGamer = new JLabel("");
 
 
 
-
+// ДОПИСАТЬ РАСПОЛОЖЕНИЕ
 
 
 
 
     public MainWindow() {
+
         //create window
         super("Игра в города");
         this.setBounds(400, 100, 700, 500);
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+
+
         //Create New Font
         Font myFontOnHelloLabel = new Font("TimesNewRoman",Font.BOLD,30);
         //create container
@@ -51,7 +55,7 @@ public class MainWindow extends JFrame  {
         container.setBackground(Color.lightGray);
 
         //add graphical elements in container
-        container.add(onePlayerButton);
+
         container.add(twoPlayerButton);
         container.add(rulesButton);
         container.add(exitFromMainMenuButton);
@@ -76,24 +80,19 @@ public class MainWindow extends JFrame  {
 
 
 
-        //OnePlayerButtonSettings
-            onePlayerButton.setBounds(300, 150, 100, 30);
-            onePlayerButton.setVisible(true);
-            onePlayerButton.addActionListener(new OnePlayerButtonActionListener());
-
         //TwoPlayerButtonSettings
-            twoPlayerButton.setBounds(300, 200, 100, 30);
+            twoPlayerButton.setBounds(300, 150, 100, 30);
             twoPlayerButton.setVisible(true);
             twoPlayerButton.addActionListener(new TwoPlayerButtonActionListener());
 
         //RulesButtonSettings
-            rulesButton.setBounds(300, 250, 100, 30);
+            rulesButton.setBounds(300, 200, 100, 30);
             rulesButton.setVisible(true);
             rulesButton.addActionListener(new RulesButtonActionListener());
 
 
         //ExitFromMainMenuButtonSettings
-            exitFromMainMenuButton.setBounds(300, 300, 100, 30);
+            exitFromMainMenuButton.setBounds(300, 250, 100, 30);
             exitFromMainMenuButton.setVisible(true);
             exitFromMainMenuButton.addActionListener(new ExitFromMainMenuButtonActionListener());
 
@@ -130,20 +129,21 @@ public class MainWindow extends JFrame  {
         //NickNameFirstPlayerFieldSettings
             nickNameFirstPlayerField.setBounds(300, 110, 200, 30);
             nickNameFirstPlayerField.setVisible(false);
+            nickNameFirstPlayerField.setText(null);
 
         //NickNameSecondPlayerFieldSettings
             nickNameSecondPlayerField.setBounds(300, 210, 200, 30);
             nickNameSecondPlayerField.setVisible(false);
+            nickNameSecondPlayerField.setText(null);
 
         //AreaForAnswerFieldSettings
             areaForAnswerField.setBounds(200, 200, 200, 30);
             areaForAnswerField.setVisible(false);
 
         //HelloLabelSettings
-             helloLabel.setBounds(200,50,300,50);
+             helloLabel.setBounds(200,50,500,50);
              helloLabel.setVisible(true);
              helloLabel.setFont(myFontOnHelloLabel);
-
 
         //LogOfCityLabelSettings
             logOfCityLabel.setBounds(000,100,150,40);
@@ -162,7 +162,7 @@ public class MainWindow extends JFrame  {
             yourTurn.setVisible(false);
 
         //YourCityOnWordSettings
-            yourCityOnWord.setBounds(250,130,200,30);
+            yourCityOnWord.setBounds(200,160,500,30);
             yourCityOnWord.setVisible(false);
 
         //TurnOfEndSettings
