@@ -6,6 +6,6 @@ import java.awt.event.ActionListener;
 public class ExitFromMainMenuButtonActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Допиши меня1");
+        System.exit(1);
     }
 }
